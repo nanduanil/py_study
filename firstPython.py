@@ -19,7 +19,14 @@ def areaTriangle(base,height):
 #%%
 def fahrenheit(celcius):
     f = 1.8 * celcius +32
-    print(celcius," degree celcius \in '\"fahrenheit is:",f)
+    print(celcius,"degree celcius \in '\\'fahrenheit is:",f)
+
+
+
+#%%
+fahrenheit(0)
+fahrenheit(50)
+fahrenheit(100)
 
 
 
