@@ -31,3 +31,29 @@ fahrenheit(100)
 
 
 #%%
+def capturePerson():
+    fname = input("Enter your first Name: ")
+    lname = input("Enter your last name: ")
+    
+    fullName = fname + " " + lname
+    print("Your Name is: " + fullName)
+    
+#%%
+
+def calculateArea(value):
+    if(value == 0):
+        absValue = value
+    elif(value>0):
+        absValue = value
+    elif(value<0):
+        absValue = -1* value
+        
+    print("Absolute Value is:",absValue)
+    
+
+    
+
+
+
+
+#%%
