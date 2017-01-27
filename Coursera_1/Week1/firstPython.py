@@ -50,10 +50,25 @@ def calculateArea(value):
         
     print("Absolute Value is:",absValue)
     
+#%%
 
+def loopy():
+    
+    strCount = input("Enter number to countdown from: ")
+    
+    try:
+        count = int(strCount)
+        print("value entered is:",count)
+        for i in range(count,0,-1):
+            print(i,end = " ")
+    except ValueError:
+        print("Value entered is not a digit")        
     
 
-
-
-
 #%%
+
+
+
+
+
+
