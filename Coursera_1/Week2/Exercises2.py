@@ -111,7 +111,7 @@ def average(numlis):
     sum = 0
     for item in numlis:
         sum = sum + item
-        print(sum,end = " ")
+        print(item,end = " ")
         count = count+1
         
     print(" ")
@@ -487,29 +487,16 @@ adverbs=["handily","sweetly","sourly","gingerly","forcefully","meekly"]
 articles=["a","the","that","this"]
 
 def simple_poem():
-    article = random.choice(articles)    
-    noun = random.choice(nouns)
-    verb = random.choice(verbs)
-    adverb = random.choice(adverbs)
-    
-    our_sentence = article + " " + noun + " " + verb + " " + adverb + "."
-    our_sentence = our_sentence.capitalize()
-    
-    print(our_sentence)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
+    for lineNumber in range(0,4):
+        article = random.choice(articles)
+        adverb = random.choice(adverbs)
+        noun = random.choice(nouns)
+        verb = random.choice(verbs)
+       
+        ourSentence = article + " " + noun + " " + verb + " " + adverb + "."
+        print(ourSentence.capitalize())
+
 #%%
 """
 End Solution:
