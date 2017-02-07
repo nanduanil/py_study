@@ -125,7 +125,10 @@ function will confuse Python and will have to be more complex to work. ***
 def problem3_3(month, day, year):
     """ Takes date of form mm/dd/yyyy and writes it in form June 17, 2016 
         Example6: problem3_5(6, 17, 2016) gives June 17, 2016 """
-    pass # replace this pass (a do-nothing) statement with your code
+    months = ("January","February","March","April","May","June","July","August",
+             "September","October","November","December")
+    out = months[month-1] + " " + str(day) + ", "+ str(year)    
+    print(out)
 
 #%%
 """
@@ -146,8 +149,13 @@ problem3_4("July",17, 2016)
 #%%
 def problem3_4(mon, day, year):
     """ Takes date such as July 17, 2016 and write it as 7/17/2016 """
-    pass # replace this pass (a do-nothing) statement with your code
-
+    monthsDict = {"January":1,"February":2,"March":3,"April":4,
+                  "May":5,"June":6,"July":7,"August":8,
+                  "September":9,"October":10,"November":11,"December":12}
+    
+    out = str(monthsDict[mon]) + "/" + str(day) + "/" + str(year)
+    print(out)
+                    
 #%%
 """    
     
@@ -171,7 +179,7 @@ def problem3_5(name):
     
     phone_numbers = {"abbie":"(860) 123-4535", "beverly":"(901) 454-3241", \
                       "james": "(212) 567-8149", "thomas": "(795) 342-9145"}
-    pass # replace this pass (a do-nothing) statement with your code
+    print(phone_numbers[name])
 
 #%%
 """
@@ -222,7 +230,16 @@ problem3_7("flowers.csv","alyssum")
 Solution starter:
 """
 #%%
+import csv
+
 def problem3_7(csv_pricefile, flower):
-    pass # replace this pass (a do-nothing) statement with your code
+    
+    file = open(csv_pricefile)
+    
+    for row in csv.reader(file):
+        if(row[0] == flower):
+            print(row[1])
+    
+    file.close()
     
 #%%

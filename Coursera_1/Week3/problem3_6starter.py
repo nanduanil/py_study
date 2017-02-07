@@ -2,4 +2,18 @@
 
 import sys
 
-# add your code here
+inputFile = sys.argv[1]
+lengthFile = sys.argv[2]
+
+inputFileReader = open(inputFile)
+lengthFileReader = open(lengthFile,'w')
+
+for line in inputFileReader:
+    line = line.strip("\n")
+    count = len(line)
+    lengthFileReader.write(str(count)+"\n")
+    
+inputFileReader.close()
+lengthFileReader.close()
+
+    
