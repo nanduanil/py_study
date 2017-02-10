@@ -383,9 +383,14 @@ for i in range(0,20):
 Solution:
 """
 #%%
+import statistics
 def temp_stat(temps):
     """ prints the average, median, std dev, and variance of temps """
-    pass # replace this pass (a do-nothing) statement with your code
+    print("Mean: ",statistics.mean(temps))
+    print("Median: ",statistics.median(temps))
+    print("SD: ",statistics.stdev(temps))
+    print("Variance: ",statistics.variance(temps))
+
     
 
 
@@ -427,11 +432,25 @@ Mode error:  no unique mode; found 4 equally common values
 Solution:
 """
 #%%
-def temp_stat(temps):
+import random
+import sys
+import statistics
+def temp_stat1():
     """ computes the average, median, std dev, and variance of temps """
-    pass # replace this pass (a do-nothing) statement with your code
-
-
+    tList = []
+    random.seed(277)
+    for i in range(0,20):
+        tList.append(random.randint(25,90))
+        
+    print("Mean: ",statistics.mean(tList))
+    print("Median: ",statistics.median(tList))
+    print("SD: ",statistics.stdev(tList))
+    print("Variance: ",statistics.variance(tList))
+    try:
+        print("Mode: ",statistics.mode(tList))
+    except statistics.StatisticsError as e:
+        print("Cannot calculate mode due to error:",e)
+    
 
 
 
