@@ -96,16 +96,21 @@ def menu_choice():
     print("   n) New")
     print("   d) Delete")
     print("   e) Edit")
+    print("   r) Re-Order")
     print("   q) Quit")
     choice = input("Choice: ")    
-    if choice.lower() in ['n','d', 's','e', 'q']:
+    if choice.lower() in ['n','d', 's','e', 'q', 'r']:
         return choice.lower()
     else:
         print(choice +"?")
         print("Invalid option")
         return None
 
-
+def reorder_phones():
+    global phones       # this insures that we use the one at the top
+    phones.sort()    
+    
+    
 def main_loop():
     
     load_phone_list()
@@ -129,6 +134,8 @@ def main_loop():
             which = input("Which item do you want to edit? ")
             print("which is ", which)
             edit_phone(which)
+        elif choice == 'r':
+            reorder_phones()
         else:
             print("Invalid choice.")
             
